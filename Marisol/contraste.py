@@ -2,6 +2,22 @@ import cv2
 import numpy as np
 from PIL import Image
 
+cap = cv2.VideoCapture(0)
+
+leido, frame = cap.read()
+
+if leido == True:
+	cv2.imwrite("foto.png", frame)
+	print("Foto tomada correctamente")
+else:
+	print("Error al acceder a la cámara")
+
+"""
+	Finalmente liberamos o soltamos la cámara
+"""
+cap.release()
+
+img1 = cv2.imread('foto.png')
 alpha = 0.3
 beta = 80
 #imgGray = cv2.imread('foto.png',0)
@@ -30,5 +46,5 @@ while (True):
     cv2.imshow('image', img)
     if cv2.waitKey(1) == ord('q'):
         break
-    cv2.imshow('imagen gris',img2)
+    #cv2.imshow('imagen gris',img2)
 cv2.destroyAllWindows()
