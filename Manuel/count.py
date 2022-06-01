@@ -5,13 +5,9 @@ import math
 
 # Open image and ensure RGB
 
-img = cv2.imread( 'iphone.png', 1 )
+img = cv2.imread( 'foto_nueva.png', 1 )
 
-img_tmp = cv2.resize( img, ( 0.0 ), fx = 0.3, fy = 0.3 )
-
-cv2.imwrite( 'iphone_resize.png', img_tmp )
-
-img_r = Image.open('iphone_resize.png').convert('RGB')
+img_r = Image.open('foto_nueva.png').convert('RGB')
 
 width, height = img_r.size
 
