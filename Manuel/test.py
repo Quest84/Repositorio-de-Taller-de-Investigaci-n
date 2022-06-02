@@ -2,7 +2,7 @@ import serial
 import tkinter
 
 # Inicializa el serial
-SerialObj = serial.Serial( '/dev/ttyACM0' )
+#SerialObj = serial.Serial( '/dev/ttyACM0' )
 
 Distance = "15"
 print( "Distance target: " + Distance )

@@ -14,8 +14,8 @@ output = "test"
 def arduino_loop(arg):
     global output
     while True:
-        temp = serialObj.readline()
-        temp = str(temp)
+        #temp = serialObj.readline()
+        temp = "1"#str(temp)
 
         output = ''.join(filter(str.isdigit, temp))
         
