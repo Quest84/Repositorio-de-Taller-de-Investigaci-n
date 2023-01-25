@@ -19,7 +19,7 @@ leido, frame = cap.read()
 """
 
 cap.release()
-img = cv2.imread('1.png')
+img = cv2.imread('foto.png')
 #img = cv2.imread("foto.png")
 cv2.imshow("IMAGEN ORIGINAL", img)
 
@@ -42,8 +42,8 @@ mask = np.zeros(img.shape[:2], np.uint8)
 cv2.drawContours(mask, [i], -1, 255, -1)
 new_img = cv2.bitwise_and(img, img, mask=mask)
 
-cv2.imshow("resultado",new_img)
-#cv2.imwrite("foto3.png",new_img)
+#cv2.imshow("resultado",new_img)
+#cv2.imwrite("foto2.png",new_img)
 
 img = cv2.imread( 'foto2.png', 1 )
 
